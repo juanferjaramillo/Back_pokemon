@@ -14,7 +14,7 @@ const server = express();
 server.name = "API";
 
 //==============MIDDLEWARES=========================
-server.use(cors());
+// server.use(cors());
 // server.use(function(req, res, next) {
 //   res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
 //      next();
