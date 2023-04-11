@@ -4,7 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const routes = require("./routes/routes.js");
-const cors = require("cors");
 
 require("./db.js");
 
