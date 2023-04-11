@@ -17,17 +17,17 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-console.log('running index.js');
+console.log("running index.js");
 
-const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
-const PORT_SERVER = 3001
-
+const server = require("./src/app.js");
+const { conn } = require("./src/db.js");
+// const PORT_SERVER = 3001
+const { DB_PORT } = process.env;
 
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
-// conn.sync({ force: true }).then(() => {
+  // conn.sync({ force: true }).then(() => {
   server.listen(PORT_SERVER, () => {
-    console.log(`server listening at ${PORT_SERVER}`); // eslint-disable-line no-console
+    console.log(`server listening at ${DB_PORT}`); // eslint-disable-line no-console
   });
 });
