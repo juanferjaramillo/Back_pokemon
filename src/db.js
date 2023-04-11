@@ -4,11 +4,12 @@ require("dotenv").config();
 const { Sequelize, HasOne } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY} = process.env;
-const DB_PORT = 5432;
+const { DB_PORT, DB_DEPLOY} = process.env;
+// const DB_PORT = 5432;
 
 
 //database conection:
+// `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/pokemon`
 // postgresql://postgres:3XTO2IphKTN2Zs9nS2ox@containers-us-west-33.railway.app:7321/railway
 const sequelize = new Sequelize(
   DB_DEPLOY,
