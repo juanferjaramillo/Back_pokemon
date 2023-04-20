@@ -28,7 +28,7 @@ var port = process.env.DB_PORT || 3001;
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
   // conn.sync({ force: true }).then(() => {
-  server.listen(port, '0.0.0.0.', () => {
+  server.listen(port, '0.0.0.0', () => {
     console.log(`server listening at ${DB_PORT}`); // eslint-disable-line no-console
   });
 });
