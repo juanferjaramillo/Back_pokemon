@@ -22,13 +22,13 @@ console.log("running index.js");
 require ('dotenv').config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
-// const PORT_SERVER = 3001
-const { DB_PORT } = process.env;
+var port = process.env.DB_PORT || 3001;
+// const { DB_PORT } = process.env;
 
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
   // conn.sync({ force: true }).then(() => {
-  server.listen(DB_PORT, () => {
+  server.listen(port, '0.0.0.0.', () => {
     console.log(`server listening at ${DB_PORT}`); // eslint-disable-line no-console
   });
 });
