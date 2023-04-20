@@ -19,6 +19,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 console.log("running index.js");
 
+require ('dotenv').config();
 const server = require("./src/app.js");
 const { conn } = require("./src/db.js");
 // const PORT_SERVER = 3001
